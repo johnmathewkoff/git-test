@@ -15,11 +15,11 @@ const personalMovieDB = {
     },
     rememberMyFilms: function() {
         for (let i = 0; i < 2; i++) {
-            const a = prompt('One of the last wathed films?', ''),
-                  b = +prompt('How much do you like it?', '');
+            const firstQuestion = prompt('One of the last wathed films?', ''),
+                  secondQuestion = +prompt('How much do you like it?', '');
             
-            if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-                personalMovieDB.movies[a] = b;
+            if (firstQuestion != null && secondQuestion != null && firstQuestion != '' && secondQuestion != '' && firstQuestion.length < 50) {
+                personalMovieDB.movies[firstQuestion] = secondQuestion;
                 console.log('done');
             } else {
                 console.log('error');
